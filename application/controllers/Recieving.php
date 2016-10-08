@@ -19,8 +19,9 @@ class Recieving extends Application
 	 */
 	public function index()
 	{
-		 //$this->load->view('RecievingPage.html');
-                 
+		 $this->load->view('RecievingPage.html');
+                 /*
+                 $this->data['pagebody'] = 'ReceivingPage';
                  $source = $this->Supplies->all();
                  $supplies = array();
                  
@@ -32,6 +33,8 @@ class Recieving extends Application
 		$this->data['supplies'] = $supplies;
 
 		$this->render();
+                  * 
+                  */
 	}
 
 }

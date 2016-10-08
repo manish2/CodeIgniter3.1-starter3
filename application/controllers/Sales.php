@@ -19,8 +19,6 @@ class Sales extends Application
 	 */
 	public function index()
 	{
-		 //$this->load->view('SalesPage.html');
-                 
                 $this->data['pagebody'] = 'SalesPage';
                  
                  $source = $this->Stock->all();
