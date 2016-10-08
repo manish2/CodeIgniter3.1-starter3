@@ -19,9 +19,6 @@ class Production extends Application
 	 */
 	public function index()
 	{
-		 $this->load->view('ProductionPage.html');
-            /*
-                 $this->data['pagebody'] = 'ProductionPage';
                 $source = $this->Recipe->all();
                  $recipes = array();
                  
@@ -29,11 +26,8 @@ class Production extends Application
 		{
 			$recipes[] = array ('code' => $recipe['code'], 'description' => $recipe['description'], 'ingredients' => $recipe['ingredients']);
 		}
-		$this->data['recipes'] = $recipes;
-
-		$this->render();
-             * 
-             */
+                
+		 $this->load->view('ProductionPage.html', $recipies);
 	}
 
 }
