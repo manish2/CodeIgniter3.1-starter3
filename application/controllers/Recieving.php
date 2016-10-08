@@ -19,7 +19,19 @@ class Recieving extends Application
 	 */
 	public function index()
 	{
-		 $this->load->view('RecievingPage.html');
+		 //$this->load->view('RecievingPage.html');
+                 
+                 $source = $this->Supplies->all();
+                 $supplies = array();
+                 
+                 foreach ($source as $item)
+		{
+			$stock[] = array ('code' => $item['code'], 'description' => $item['description'], 'receivingUnit' => $item['receivingUnit'],
+                            'receivingCost' => $item['receivingCost'], 'stockingUnit' => $item['stockingUnit'], 'quantity' => $item['quantity']);
+		}
+		$this->data['supplies'] = $supplies;
+
+		$this->render();
 	}
 
 }
