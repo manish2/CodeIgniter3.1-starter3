@@ -19,7 +19,19 @@ class Sales extends Application
 	 */
 	public function index()
 	{
-		 $this->load->view('SalesPage.html');
+                $this->data['pagebody'] = 'SalesPage';
+                 
+                 $source = $this->Stock->all();
+                 $stock = array();
+                 
+                 foreach ($source as $item)
+		{
+			$stock[] = array ('code' => $item['code'], 'description' => $item['description'], 'sellingPrice' => $item['sellingPrice']);
+		}
+		$this->data['stock'] = $stock;
+
+		$this->render();
+                 
 	}
 
 }
