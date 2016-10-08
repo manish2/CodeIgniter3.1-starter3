@@ -28,10 +28,7 @@ class Sales extends Application
 		{
 			$stock[] = array ('code' => $item['code'], 'description' => $item['description'], 'sellingPrice' => $item['sellingPrice']);
 		}
-		$this->data['stock'] = $stock;
-
-		$this->render();
-                 
+		$this->load->view('SalesPage.html', $stock);
 	}
 
 }
