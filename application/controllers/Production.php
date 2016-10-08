@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends Application
+class Production extends Application
 {
 
 	/**
@@ -19,8 +19,7 @@ class Welcome extends Application
 	 */
 	public function index()
 	{
-		$this->data['pagebody'] = 'stock';
-		$this->render(); 
+		 $this->load->view('ProductionPage.html');
 	}
 
 }

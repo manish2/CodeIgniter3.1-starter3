@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends Application
+class Admin extends Application
 {
 
 	/**
@@ -19,8 +19,7 @@ class Welcome extends Application
 	 */
 	public function index()
 	{
-		$this->data['pagebody'] = 'recipe';
-		$this->render(); 
+		 $this->load->view('AdminPage.html');
 	}
 
 }
