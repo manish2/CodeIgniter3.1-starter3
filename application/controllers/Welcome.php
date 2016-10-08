@@ -17,10 +17,13 @@ class Welcome extends Application
 	 * map to /welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	/**
+	 * Homepage for our app
+	 */
 	public function index()
 	{
-		$this->data['pagebody'] = 'welcome_message';
-		$this->render(); 
+		// this is the view we want shown
+		 $this->load->view('Home.html');		
 	}
 
 }
