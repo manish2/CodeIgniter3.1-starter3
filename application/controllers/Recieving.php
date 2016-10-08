@@ -19,9 +19,6 @@ class Recieving extends Application
 	 */
 	public function index()
 	{
-		 $this->load->view('RecievingPage.html');
-                 /*
-                 $this->data['pagebody'] = 'ReceivingPage';
                  $source = $this->Supplies->all();
                  $supplies = array();
                  
@@ -30,11 +27,7 @@ class Recieving extends Application
 			$stock[] = array ('code' => $item['code'], 'description' => $item['description'], 'receivingUnit' => $item['receivingUnit'],
                             'receivingCost' => $item['receivingCost'], 'stockingUnit' => $item['stockingUnit'], 'quantity' => $item['quantity']);
 		}
-		$this->data['supplies'] = $supplies;
-
-		$this->render();
-                  * 
-                  */
+		 $this->load->view('RecievingPage.html', $supplies);
 	}
 
 }
