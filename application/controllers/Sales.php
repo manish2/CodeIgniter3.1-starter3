@@ -18,9 +18,7 @@ class Sales extends Application
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-                $this->data['pagebody'] = 'SalesPage';
-                 
+	{                 
                  $source = $this->Stock->all();
                  $stock = array();
                  
@@ -28,7 +26,8 @@ class Sales extends Application
 		{
 			$stock[] = array ('code' => $item['code'], 'description' => $item['description'], 'sellingPrice' => $item['sellingPrice']);
 		}
-		$this->load->view('SalesPage.html', $stock);
+                $this->data['pagebody'] = 'SalesPage';
+		$this -> render();
 	}
 
 }

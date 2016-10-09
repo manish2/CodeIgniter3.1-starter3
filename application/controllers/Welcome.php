@@ -23,7 +23,8 @@ class Welcome extends Application
 	public function index()
 	{
 		// this is the view we want shown
-		 $this->load->view('Home.html');		
+		 $this->load->view('Home');	
+                 $source = $this->Recipe->all();
 	}
 
 }
