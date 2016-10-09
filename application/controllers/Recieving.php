@@ -27,7 +27,7 @@ class Recieving extends Application
 			$stock[] = array ('code' => $item['code'], 'description' => $item['description'], 'receivingUnit' => $item['receivingUnit'],
                             'receivingCost' => $item['receivingCost'], 'stockingUnit' => $item['stockingUnit'], 'quantity' => $item['quantity']);
 		}
-		 $this->load->view('RecievingPage.html', $supplies);
+		 $this->load->view('RecievingPage', $supplies);
 	}
 
 }

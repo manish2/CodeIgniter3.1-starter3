@@ -63,19 +63,23 @@
     <!--HOME SECTION-->
     <div id="home-sec">
 
-   
     <div class="container"  >
         <div class="row text-center">
-            <div  class="col-md-12" >
-                <span class="head-main" >Go Relax Template</span>
-                <h2 class="head-sub-main">Download And Get Relaxed</h2>        
-                 
+            <div  class="col-md-12" > 
+                <br>
+                <?php               
+                  $i = 1; 
+                  $s = strval($i); 
+                 while(array_key_exists($s,$index)) { 
+                     echo '' . $index[$s]["code"] . '<br>';    
+                     $i++; 
+                     $s = strval($i);
+                  }     
+                ?> 
+               
             </div>
             <div class="col-md-12 col-sm-12">
-               
-                <a  href="#services-sec">
-                 <i class="fa fa-crosshairs fa-5x go-marg"></i> 
-                    </a>
+              
             </div>
         </div>
     </div>
@@ -83,3 +87,5 @@
 </html> 
     
     <!--END HOME SECTION-->  
+
+

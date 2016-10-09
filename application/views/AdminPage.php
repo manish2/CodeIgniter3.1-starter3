@@ -82,5 +82,4 @@
          </div>
 </html> 
     
-    <!--END HOME SECTION-->  
-
+    <!--END HOME SECTION--> 

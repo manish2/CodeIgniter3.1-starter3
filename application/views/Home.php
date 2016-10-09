@@ -67,16 +67,11 @@
     <div class="container"  >
         <div class="row text-center">
             <div  class="col-md-12" >
-                <span class="head-main" >Go Relax Template</span>
-                <h2 class="head-sub-main">Download And Get Relaxed</h2>        
-                 
+                <?php 
+                  
+                ?> 
             </div>
-            <div class="col-md-12 col-sm-12">
-               
-                <a  href="#services-sec">
-                 <i class="fa fa-crosshairs fa-5x go-marg"></i> 
-                    </a>
-            </div>
+           
         </div>
     </div>
          </div>
