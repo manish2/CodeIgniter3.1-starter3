@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Production extends Application
 {
-
 	/**
 	 * Index Page for this controller.
 	 *
@@ -21,11 +20,10 @@ class Production extends Application
 	{
                 $source = $this->Recipe->all();
                 $recipes['index'][] = array();
-                 foreach ($source as $recipe)
+                foreach ($source as $recipe)
 		{
 			$recipes['index'][] = array ('code' => $recipe['code'], 'description' => $recipe['description'], 'ingredients' => $recipe['ingredients']);
 		}
-		 $this->load->view('ProductionPage', $recipes);
+		$this->load->view('ProductionPage', $recipes);
 	}
-
 }
